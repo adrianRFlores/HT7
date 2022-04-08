@@ -1,43 +1,33 @@
 class Association{
-	String eng;
+	String base;
 	String esp;
-	String fr;
 
-	public Association(String eng, String fr, String esp){
-		this.eng = eng;
-		this.fr = fr;
+	public Association(String base, String esp){
+		this.base = base;
 		this.esp = esp;
 	}
 
 	int compareTo(Association a){
-		return eng.compareTo(a.getEng());
+		return base.compareTo(a.getBase());
 	}
 
-	String getEng(){
-		return eng;
+	String getBase(){
+		return base;
 	}
 
 	String get(){
 		return esp;
 	}
 
-	String getFr(){
-		return fr;
-	}
-
 	boolean equals(Association a){
-		if(eng.equals(a.getEng())){
-			if(fr.equals(a.getFr())){
-				if(esp.equals(a.get())){
-					return true;
-				}
-			}
+		if(base.equals(a.getBase())){
+			return true;
 		}
 		return false;
 	}
 
 	@Override
 	public String toString(){
-		return eng + ", " + fr + ": " + esp + ".";
+		return "(" + base + ", " + esp + ")";
 	}
 }

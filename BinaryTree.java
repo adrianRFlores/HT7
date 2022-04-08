@@ -85,19 +85,22 @@ class BinaryTree {
         } 
     } 
      
-    boolean search(Association key)  { 
-        root = search_Recursive(root, key); 
-        if (root!= null)
-            return true;
-        else
-            return false;
+    Association search(String key)  { 
+        Node a = search_Recursive(root, new Association(key, "a"));
+        try{
+            return a.getKey();
+        } catch(NullPointerException e){
+            return null;
+        }
+        
+
     } 
    
     //recursive insert function
     Node search_Recursive(Node root, Association key)  { 
         // Base Cases: root is null or key is present at root 
-        if (root==null || root.key.equals(key)) 
-            return root; 
+        if (root==null || root.key.equals(key))
+            return root;
         // val is greater than root's key 
         if (root.key.compareTo(key) > 0) 
             return search_Recursive(root.left, key); 
