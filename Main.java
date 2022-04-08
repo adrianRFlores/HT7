@@ -39,12 +39,15 @@ class Main{
 					break;
 
 				case 2:
-					ArrayList<Association> temp = new ArrayList<Association>();
-					
+					ArrayList<Association> temp = r.getAs();
+					bstEng.insert(temp.get(0));
+					bstFr.insert(temp.get(1));
 					break;
 
 				case 3:
-
+					ArrayList<Association> temp2 = r.removeAs();
+					bstEng.deleteKey(temp2.get(0).getBase());
+					bstFr.deleteKey(temp2.get(1).getBase());
 					break;
 
 				case 4:

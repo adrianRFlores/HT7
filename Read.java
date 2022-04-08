@@ -56,13 +56,24 @@ class Read{
 	ArrayList<Association> getAs(){
 		ArrayList<Association> as = new ArrayList<Association>();
 		System.out.println("Ingrese la palabra en ingles: ");
-		String base = scan.nextLine();
+		String base = scan.next();
 		System.out.println("Ingrese la palabra en español: ");
-		esp = scan.nextLine();
+		String esp = scan.next();
 		as.add(new Association(base, esp));
 		System.out.println("Ingrese la palabra en frances: ");
-		base = scan.nextLine();
+		base = scan.next();
 		as.add(new Association(base, esp));
+		return as;
+	}
+
+	ArrayList<Association> removeAs(){
+		ArrayList<Association> as = new ArrayList<Association>();
+		System.out.println("Ingrese la palabra en ingles: ");
+		String base = scan.next();
+		as.add(new Association(base, " "));
+		System.out.println("Ingrese la palabra en frances: ");
+		base = scan.next();
+		as.add(new Association(base, " "));
 		return as;
 	}
 }

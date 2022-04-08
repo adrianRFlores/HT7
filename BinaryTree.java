@@ -7,8 +7,8 @@ class BinaryTree {
         root = null; 
     } 
     //delete a node from BST
-    void deleteKey(Association key) { 
-        root = delete_Recursive(root, key); 
+    void deleteKey(String key) { 
+        root = delete_Recursive(root, new Association(key, " ")); 
     } 
 
     //recursive delete function
