@@ -1,5 +1,11 @@
-class BinaryTree { 
-    // BST root node 
+/**
+ * Clase para los BST.
+ * 
+ * Codigo adaptado de https://www.softwaretestinghelp.com/binary-search-tree-in-java/
+ * ¡Gracias World Wide Web!
+ */
+
+class BinaryTree {  
     Node root; 
   
    // Constructor for BST =>initial empty tree
@@ -38,6 +44,7 @@ class BinaryTree {
         return root; 
     } 
    
+    // get the left-most value
     Association minValue(Node root)  { 
         //initially minval = root
         Association minval = root.key; 
